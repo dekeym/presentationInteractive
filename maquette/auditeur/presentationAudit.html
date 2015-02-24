@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Dynamic</title>
+        <meta name="author" content="Camille, Eddy et Stéphane" />
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <link rel="shortcut icon" href="images/favicon.png"> 
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    
+    <body> 
+    	<header>
+    		<div style="margin-left: auto; margin-right: auto; width: 372px;border-bottom: 1px solid gray; ">
+    			<img src="images/dynamic.png" />
+       		</div>
+    	</header>
+    	
+    	<div style="margin-left: auto; margin-right: auto; width: 372px; text-align:center; border-bottom: 1px solid gray;">
+    		<div style="float:left; font-size:0.7em">
+            	<p id="readyState">readyState : <span name="rs" style="background-color: #a9c832; color: #fff; padding: 0.1em 0.5em;">&nbsp;</span></p>
+        	</div>
+        	
+    		 <div style="clear:both;"></div>
+    	</div>
+
+    	<div id="login" style="margin-left: auto; margin-right: auto; width: 372px; text-align:center; border-bottom: 1px solid gray;">
+	       
+	    	<form id='log'>
+	            <div class="row">
+	            	<span>
+	            		<input class="balloon" id='pseudo' name="pseudo" type='text' required placeholder='Votre pseudo'/>
+	            		<label for='pseudo'>Pseudo</label>
+	            	</span>
+	              <input type="submit" class="submitBTN" value="Login" id="valid">
+	            </div>     
+	      	</form>
+    	</div>
+
+    	<div id="content" style="display: none;">
+	    	<div style="margin-left: auto; margin-right: auto; width: 372px; text-align:center; border-bottom: 1px solid gray; ">
+		    	<h2 style="color:#D01A5C">Apprenez à créer votre site web avec <b>HTML5</b> et <b>CSS3</b>.</h2>
+	    	</div>
+
+	    	<div style="margin-left: auto; margin-right: auto; width: 372px; border-bottom: 1px solid gray; padding:20px;">
+		    	<ul>
+		            <li><strong style="color:#D01A5C">I.1</strong> Les balises HTML</li>
+		            <li><strong style="color:#D01A5C">I.2</strong> Votre première page web en HTML</li>
+		            <li><strong style="color:#D01A5C">I.3</strong> Organiser son texte</li>
+		            <li><strong style="color:#D01A5C">I.4</strong> Créer des liens</li>
+		            <li><strong style="color:#D01A5C">I.5</strong> Les images</li>
+		            <li><strong style="color:#D01A5C">I.6</strong> Quiz</li>
+		        </ul>
+	    	</div>
+
+	    	<div id="d3" style="display:none;margin-left: auto; margin-right: auto; width: 372px; border-bottom: 1px solid gray; padding:20px;">
+		    	<h2 style="font-size:1.5em; margin-bottom:20px;margin-top: 0;"><strong style="color:#D01A5C">Les balises</strong></h2>
+
+	            Les pages HTML sont remplies de ce qu'on appelle des balises. Elles sont invisibles à l'écran mais permettent à l'ordinateur de comprendre ce qu'il doit afficher.<br/><br/>
+	            Elles sont entourées de « chevrons » : <strong style="color:#D01A5C">&lt;balise&gt;</strong><br/><br/>
+
+	            Elles indiquent la nature du texte qu'elles encadrent.<br/><br/>
+
+	            On distingue deux types de balises : les balises en paires et les balises orphelines.
+	    	</div>
+
+	    	<div id="d4" style="display:none;margin-left: auto; margin-right: auto; width: 372px; border-bottom: 1px solid gray; padding:20px;">
+		    	<h2 style="font-size:1.5em; margin-bottom:20px;margin-top: 0;"><strong style="color:#D01A5C">Les balises en paires</strong></h2>
+
+	           Elles s'ouvrent, contiennent du texte, et se ferment plus loin. Voici à quoi elles ressemblent : <br/><br/>
+
+           		 <strong style="color:#D01A5C">&lt;titre&gt;</strong>Ceci est un titre<strong style="color:#D01A5C">&lt;/titre ></strong><br/><br/>
+
+           		 On distingue une balise ouvrante (<strong style="color:#D01A5C">&lt;titre&gt;</strong>) et une balise fermante (<strong style="color:#D01A5C">&lt;/titre&gt;</strong>) qui indique que le titre se termine. Cela signifie pour l'ordinateur que tout ce qui n'est pas entre ces deux balises… n'est pas un titre.
+	    	</div>
+
+	    	<div id="d5" style="display:none;margin-left: auto; margin-right: auto; width: 372px; border-bottom: 1px solid gray; padding:20px;">
+		    	<h2 style="font-size:1.5em; margin-bottom:20px;margin-top: 0;"><strong style="color:#D01A5C">Les balises orphelines</strong></h2>
+
+	          Ce sont des balises qui servent le plus souvent à insérer un élément à un endroit précis (par exemple une image). 
+
+           		<br/><br/>Il n'est pas nécessaire de délimiter le début et la fin de l'image, on veut juste dire à l'ordinateur « Insère une image ici ».<br/><br/>
+
+            	Une balise orpheline s'écrit comme ceci : <strong style="color:#D01A5C">&lt;image /&gt;</strong>
+
+            </div>
+
+	    	<div id="q1" style="display: none;margin-left: auto; margin-right: auto; width: 372px; border-bottom: 1px solid gray; padding:20px;">
+		    	<h3>
+		    		<strong style="color:#D01A5C">QUIZ</strong> - Quelle balise permet l'affichage d'une image ?
+				</h3>
+				<button id="q1.1" onclick="functionReponse('q1.1');">Réponse 1 : &lt;jpg&gt;</button>
+				<button id="q1.2" onclick="functionReponse('q1.2');">Réponse 2 : &lt;img&gt;</button>
+				<button id="q1.3" onclick="functionReponse('q1.3');">Réponse 2 : &lt;picture&gt;</button>
+				<button id="q1.4" onclick="functionReponse('q1.4');">Réponse 2 : &lt;png&gt;</button>
+
+	    	</div>
+
+	    	<div style="bottom: 10%;margin-left: auto; margin-right: auto; width: 372px; border-bottom: 1px solid gray; padding:20px;">
+		    	<h3 style="margin-top:0:">
+		    		Poser une question :
+				</h3>
+
+				<div class="row">
+	            	<span>
+	            		<input class="balloon" id='questionASK' name="questionASK" type='text' required placeholder='Entrer une question'/>
+	            		<label for='questionASK'>Question</label>
+	            	</span>
+
+	              <button class="submitBTN" onclick="functionQuestion('questionASK');">Envoyer ma question</button>
+
+	            </div>     
+
+	    	</div>
+   		</div>
+
+    </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+		
+    <script>
+
+var ws = null;
+var pseudoCST;
+
+//  Création d'un nouveau socket
+// (Pour Mozilla < 11 avec version préfixée)
+if('MozWebSocket' in window) {
+
+  ws = new MozWebSocket("ws://127.0.0.1:1337/phpwebsocket/chat.php");
+
+} else if('WebSocket' in window) {
+
+  ws = new WebSocket("ws://127.0.0.1:1337/phpwebsocket/chat.php");
+
+}
+
+if(typeof ws !=='undefined') {
+
+  // Indication de l'état
+  var rs = document.getElementsByName('rs');
+
+  // Lors de l'ouverture de connexion
+  ws.onopen = function() {
+    for (j = 0; j < rs.length; j++) {
+        rs[j].innerHTML = this.readyState;
+    }
+    ws.send("+1");
+  };
+  
+  function functionReponse(parameter) {
+    ws.send('RepQ.'+parameter);
+
+    var res = parameter.split(".");
+    var elDiv = document.getElementById(res[0]).getElementsByTagName("button");
+    for (s = 0; s < elDiv.length; s++) {
+   
+    	if (elDiv[s].id != parameter) {
+    		elDiv[s].style.display='none';
+    	} else {
+    		elDiv[s].disabled ='true';
+    	}
+    }
+
+  }
+
+  function functionQuestion(parameter) {
+
+    var input = document.getElementById(parameter);
+    var question = 'ASK.' + pseudoCST + ' : ' + input.value;
+    if(input.value != '') {
+		ws.send(question);
+    }
+    
+
+    // Mise à zéro du champ et focus
+    input.focus();
+    input.value = '';
+
+  }
+
+  // Lors de la réception d'un message
+  ws.onmessage = function(e) {
+
+    for (j = 0; j < rs.length; j++) {
+        rs[j].innerHTML = this.readyState;
+    }
+
+    if (e.data.substr(0,7)=='REDIREC') {
+        var res = e.data.split(".");
+        document.getElementById(res[1]).style.display='block';
+
+		$('html, body').animate({
+			scrollTop:$('#'+res[1]).offset().top
+		}, 'slow');
+
+        
+    }
+  };
+
+  // Lors d'une erreur de connexion
+  ws.onerror = function(e) {      
+    for (j = 0; j < rs.length; j++) {
+        rs[j].innerHTML = this.readyState;
+    }
+
+  };
+
+  // Lors de la fermeture de connexion
+  ws.onclose = function(e) {     
+    for (j = 0; j < rs.length; j++) {
+        rs[j].innerHTML = this.readyState;
+    }
+  };
+
+  // Evénement submit du formulaire
+  document.getElementsByTagName('form')[0].onsubmit = function(e) {
+
+    var pseudo = document.getElementById('pseudo');
+    pseudoCST = pseudo.value;
+    
+    // Envoi de la chaîne texte
+    ws.send(pseudo.value);
+    
+    // Mise à zéro du champ et focus
+    // pseudo.focus();
+    // pseudo.value = '';
+
+    document.getElementById('login').style.display='none';
+    document.getElementById('content').style.display='block';
+    
+    // Empêche de valider le formulaire
+    e.preventDefault();
+  };
+  
+} else {
+
+  alert("Ce navigateur ne supporte pas Web Sockets");
+
+}
+
+// Fonction d’ajout au journal
+function log(txt) {
+  document.getElementById('log').innerHTML += txt + "<br>\n";
+}
+
+</script>
+</html>
+

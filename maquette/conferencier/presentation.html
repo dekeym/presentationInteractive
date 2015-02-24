@@ -1,0 +1,427 @@
+<!doctype html>
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+
+    <div id="ing" class="step" data-x="-1000" data-y="-1500" data-rotate="270" data-scale="6">
+        <img src="logo.png" /><hr style="margin-top: 0;" />
+        <p>Apprenez à créer votre site web avec <b class="rotating">HTML5</b> et <b class="rotating">CSS3</b>.</p>
+    </div>
+
+    <div id="tiny" class="step" data-x="-1000" data-y="-1500" data-z="-3000" data-rotate="300" data-scale="1">
+        <q style="font-size: 0.6em;">
+            <strong>Partie I :</strong> Les bases de l'HTML.
+        </q>
+        <ul style="margin-top:20px; font-size: 0.5em;">
+            <li><strong>I.1</strong> Les balises HTML</li>
+            <li><strong>I.2</strong> Votre première page web en HTML</li>
+            <li><strong>I.3</strong> Organiser son texte</li>
+            <li><strong>I.4</strong> Créer des liens</li>
+            <li><strong>I.5</strong> Les images</li>
+            <li><strong>I.6</strong> Quiz</li>
+        </ul>
+    </div>
+
+    <div id="its-in-3d" class="step" data-x="600" data-y="-1400" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+        <p>Se connecter à la plateforme Dynamic</p>
+        <a href="#">http://localhost/auditeur/</a>
+        <p style="margin-top:20px;">
+            ou grâce au QRCode
+        </p>
+        <img src="qrcode.png" width="20%" />
+        
+    </div>
+
+
+    <div class="step slide" data-x="1000" data-y="-2000">
+        <div style="float:left; font-size:0.7em">
+            <p id="readyState">readyState : <span name="rs" style="background-color: #a9c832; color: #fff; padding: 0.1em 0.5em;">&nbsp;</span></p>
+        </div>
+        <p style="float:right; font-size:0.7em">Nombre de connecté : <span name="counter" style="background-color: #a9c832; color: #fff; padding: 0.1em 0.5em;">0</span></p>
+        <div style="clear: both;"></div>
+
+        <p style="margin-top:30px;">
+            <h2 style="font-size:1.5em; margin-bottom:20px;"><strong style="color:#D01A5C">Les balises</strong></h2>
+
+            Les pages HTML sont remplies de ce qu'on appelle des balises. Elles sont invisibles à l'écran mais permettent à l'ordinateur de comprendre ce qu'il doit afficher.<br/><br/>
+            Elles sont entourées de « chevrons » : <strong style="color:#D01A5C">&lt;balise&gt;</strong><br/><br/>
+
+            Elles indiquent la nature du texte qu'elles encadrent.<br/><br/>
+
+            On distingue deux types de balises : les balises en paires et les balises orphelines.
+        </p>    
+        <button style="position: fixed;bottom: 10%; left:80%" onclick="functionRedirec('d3');">Synchroniser l'affichage</button>
+    </div>
+
+    <div class="step slide" data-x="1800" data-y="-2000" data-rotate-x="-40">
+        <div style="float:left; font-size:0.7em">
+            <p id="readyState">readyState : <span name="rs" style="background-color: #a9c832; color: #fff; padding: 0.1em 0.5em;">&nbsp;</span></p>
+        </div>
+        <p style="float:right; font-size:0.7em">Nombre de connecté : <span name="counter" style="background-color: #a9c832; color: #fff; padding: 0.1em 0.5em;">0</span></p>
+        <div style="clear: both;"></div>
+
+        <p style="margin-top:30px;">
+            <h2 style="font-size:1.5em; margin-bottom:20px;"><strong style="color:#D01A5C">Les balises en paires</strong></h2>
+
+           Elles s'ouvrent, contiennent du texte, et se ferment plus loin. Voici à quoi elles ressemblent : <br/><br/>
+
+            <strong style="color:#D01A5C">&lt;titre&gt;</strong>Ceci est un titre<strong style="color:#D01A5C">&lt;/titre ></strong><br/><br/>
+
+            On distingue une balise ouvrante (<strong style="color:#D01A5C">&lt;titre&gt;</strong>) et une balise fermante (<strong style="color:#D01A5C">&lt;/titre&gt;</strong>) qui indique que le titre se termine. Cela signifie pour l'ordinateur que tout ce qui n'est pas entre ces deux balises… n'est pas un titre.
+
+        </p>   
+        <button style="position: fixed;bottom: 10%; left:80%" onclick="functionRedirec('d4');">Synchroniser l'affichage</button>
+    </div>
+
+    <div class="step slide" data-x="2600" data-y="-2000" data-rotate-x="-20">
+        <div style="float:left; font-size:0.7em">
+            <p id="readyState">readyState : <span name="rs" style="background-color: #a9c832; color: #fff; padding: 0.1em 0.5em;">&nbsp;</span></p>
+        </div>
+        <p style="float:right; font-size:0.7em">Nombre de connecté : <span name="counter" style="background-color: #a9c832; color: #fff; padding: 0.1em 0.5em;">0</span></p>
+        <div style="clear: both;"></div>
+
+        <p style="margin-top:30px;">
+            <h2 style="font-size:1.5em; margin-bottom:20px;"><strong style="color:#D01A5C">Les balises orphelines</strong></h2>
+
+           Ce sont des balises qui servent le plus souvent à insérer un élément à un endroit précis (par exemple une image). 
+
+           <br/><br/>Il n'est pas nécessaire de délimiter le début et la fin de l'image, on veut juste dire à l'ordinateur « Insère une image ici ».<br/><br/>
+
+            Une balise orpheline s'écrit comme ceci : <strong style="color:#D01A5C">&lt;image /&gt;</strong>
+
+        </p>   
+        <button style="position: fixed;bottom: 10%; left:80%" onclick="functionRedirec('d5');">Synchroniser l'affichage</button>
+    </div>
+
+    <div class="step slide" data-x="2600" data-y="-1200">
+        <div style="float:left; font-size:0.7em">
+            <p id="readyState">readyState : <span name="rs" style="background-color: #a9c832; color: #fff; padding: 0.1em 0.5em;">&nbsp;</span></p>
+        </div>
+        <p style="float:right; font-size:0.7em">Nombre de connecté : <span name="counter" style="background-color: #a9c832; color: #fff; padding: 0.1em 0.5em;">0</span></p>
+        <div style="clear: both;"></div>
+
+        <h3 style="margin-top:50px;"><strong style="color:#D01A5C">QUIZ</strong> - Quelle balise permet l'affichage d'une image ?</h3>
+        
+        <p style="font-size: 0.8em; margin-top:20px;">&lt;jpg&gt; - <span id='nbq1.1'>0</span></p>
+        <div style="height:40px; width:95%; background-color:#CCCCCC;float:left;">
+            <div name='bBq1' id='bBq1.1' style="height:40px; width:0%; background-color:#0080A7; float:left;"></div>
+        </div><div style="clear: both;"></div>
+        <br/>
+
+        <p style="font-size: 0.8em;">&lt;img&gt; - <span id='nbq1.2'>0</span></p>
+        <div style="height:40px; width:95%; background-color:#CCCCCC;float:left;">
+            <div name='bBq1' id='bBq1.2' style="height:40px; width:0%; background-color:#0080A7; float:left;"></div>
+        </div><div style="clear: both;"></div>
+        <br/>
+
+        <p style="font-size: 0.8em;">&lt;picture&gt; - <span id='nbq1.3'>0</span></p>
+        <div style="height:40px; width:95%; background-color:#CCCCCC;float:left;">
+            <div name='bBq1' id='bBq1.3' style="height:40px; width:0%; background-color:#0080A7; float:left;"></div>
+        </div><div style="clear: both;"></div>
+        <br/>
+
+        <p style="font-size: 0.8em;">&lt;png&gt; - <span id='nbq1.4'>0</span></p>
+        <div style="height:40px; width:95%; background-color:#CCCCCC;float:left;">
+            <div name='bBq1' id='bBq1.4' style="height:40px; width:0%; background-color:#0080A7; float:left;"></div>
+        </div><div style="clear: both;"></div>
+        <br/>
+
+        <button style="position: fixed;bottom: 10%; left:80%" onclick="functionRedirec('q1');">Synchroniser l'affichage</button>
+    </div>
+
+    <div id="its-in-3d2" class="step" data-x="2500" data-y="-500" data-z="-100" data-rotate-x="-50" data-rotate-y="10" data-scale="2">
+        <p>Vos questions :</p>
+
+        <p id="ASK" style="font-size:0.6em;">
+
+        </p>
+    </div>
+
+    
+    <div id="overview" class="step" data-x="1500" data-y="-1000" data-scale="7">
+    </div>
+
+</div>
+
+<!--
+    
+    Hint is not related to impress.js in any way.
+    
+    But it can show you how to use impress.js features in creative way.
+    
+    When the presentation step is shown (selected) its element gets the class of "active" and the body element
+    gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
+    so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
+    the id of `bored`) is active, body element gets a class of `impress-on-bored`.
+    
+    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
+    the first step of presentation is visible for a couple of seconds.
+    
+    ...
+    
+    And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
+    It's just a quick and dirty workaround to get different hint text for touch devices.
+    In a real world it should be at least placed in separate JS file ... and the touch content should be
+    probably just hidden somewhere in HTML - not hard-coded in the script.
+    
+    Just sayin' ;)
+    
+-->
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<!--
+    
+    Last, but not least.
+    
+    To make all described above really work, you need to include impress.js in the page.
+    I strongly encourage to minify it first.
+    
+    In here I just include full source of the script to make it more readable.
+    
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document. Not only because it's a good practice, but also
+    because it should be done when the whole document is ready.
+    Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+    
+-->
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+<script>
+
+var ws = null;
+
+//  Création d'un nouveau socket
+// (Pour Mozilla < 11 avec version préfixée)
+if('MozWebSocket' in window) {
+
+  ws = new MozWebSocket("ws://127.0.0.1:1337/phpwebsocket/chat.php");
+
+} else if('WebSocket' in window) {
+
+  ws = new WebSocket("ws://127.0.0.1:1337/phpwebsocket/chat.php");
+
+}
+
+if(typeof ws !=='undefined') {
+
+  // Indication de l'état
+  var rs = document.getElementsByName('rs');
+  var box = document.getElementsByName("counter");
+
+  // Lors de l'ouverture de connexion
+  ws.onopen = function() {
+    for (j = 0; j < box.length; j++) {
+        rs[j].innerHTML = this.readyState;
+    }
+  };
+  
+  function functionRedirec(parameter) {
+    ws.send('REDIREC.'+parameter);
+  }
+  
+
+  // Lors de la réception d'un message
+  ws.onmessage = function(e) {
+
+    for (j = 0; j < rs.length; j++) {
+        rs[j].innerHTML = this.readyState;
+    }
+
+
+    if (e.data.substr(0,4)=='RepQ') {
+        
+        var res = e.data.split(".");
+
+        var barreB = document.getElementsByName("bB" + res[1]);
+
+        for (k = 1; k <= barreB.length; k++) {
+            
+            var idBarre = 'bB' + res[1] + '.' + k;
+            var idNB = 'nb' + res[1] + '.' + k;
+        
+            var nb = parseFloat(document.getElementById(idNB).innerHTML);
+            var nbTOT = box[0].innerHTML;
+
+            if (k == res[2]) {
+                document.getElementById(idNB).innerHTML = (nb+1);
+            }
+            var px = ((parseFloat(document.getElementById(idNB).innerHTML))*100)/(nbTOT);
+          
+            document.getElementById(idBarre).style.width=px+'%';
+        }
+        
+    }
+
+    if (e.data.substr(0,3)=='ASK') {
+        
+        var res = e.data.split(".");
+
+        var p = document.getElementById(res[0]);
+
+        p.innerHTML = p.innerHTML + res[1] + '<br/>';
+        
+    }
+
+    if (e.data=='+1') {
+        var number = box[0].innerHTML;
+        number++;
+        for (i = 0; i < box.length; i++) {
+            box[i].innerHTML = number;
+        }
+    }
+  };
+
+  // Lors d'une erreur de connexion
+  ws.onerror = function(e) {  
+   
+    for (j = 0; j < box.length; j++) {
+        rs[j].innerHTML = this.readyState;
+    }
+
+  };
+
+  // Lors de la fermeture de connexion
+  ws.onclose = function(e) {  
+    for (j = 0; j < box.length; j++) {
+        rs[j].innerHTML = this.readyState;
+    }
+  };
+
+  // Evénement submit du formulaire
+  document.getElementsByTagName('form')[0].onsubmit = function(e) {
+    if (document.getElementById('pseudo')) {
+        alert ('coucou');
+    } else if (document.getElementById('texte')) {
+        alert ('coucou2');
+    }
+    
+    // Envoi de la chaîne texte
+    //ws.send(texte.value);
+    
+    // Mise à zéro du champ et focus
+   // texte.focus();
+   // texte.value = '';
+    
+    // Empêche de valider le formulaire
+    e.preventDefault();
+  };
+  
+} else {
+
+  alert("Ce navigateur ne supporte pas Web Sockets");
+
+}
+
+// Fonction d’ajout au journal
+function log(txt) {
+  document.getElementById('log').innerHTML += txt + "<br>\n";
+}
+
+</script>
+
+<!--
+    
+    The `impress()` function also gives you access to the API that controls the presentation.
+    
+    Just store the result of the call:
+    
+        var api = impress();
+    
+    and you will get three functions you can call:
+    
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( idx | id | element, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+    
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+    
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+    
+-->
+
+</body>
+</html>
+
+<!--
+    
+    Now you know more or less everything you need to build your first impress.js presentation, but before
+    you start...
+    
+    Oh, you've already cloned the code from GitHub?
+    
+    You have it open in text editor?
+    
+    Stop right there!
+    
+    That's not how you create awesome presentations. This is only a code. Implementation of the idea that
+    first needs to grow in your mind.
+    
+    So if you want to build great presentation take a pencil and piece of paper. And turn off the computer.
+    
+    Sketch, draw and write. Brainstorm your ideas on a paper. Try to build a mind-map of what you'd like
+    to present. It will get you closer and closer to the layout you'll build later with impress.js.
+    
+    Get back to the code only when you have your presentation ready on a paper. It doesn't make sense to do
+    it earlier, because you'll only waste your time fighting with positioning of useless points.
+    
+    If you think I'm crazy, please put your hands on a book called "Presentation Zen". It's all about 
+    creating awesome and engaging presentations.
+    
+    Think about it. 'Cause impress.js may not help you, if you have nothing interesting to say.
+    
+-->
+
+<!--
+    
+    Are you still reading this?
+    
+    For real?
+    
+    I'm impressed! Feel free to let me know that you got that far (I'm @bartaz on Twitter), 'cause I'd like
+    to congratulate you personally :)
+    
+    But you don't have to do it now. Take my advice and take some time off. Make yourself a cup of coffee, tea,
+    or anything you like to drink. And raise a glass for me ;)
+    
+    Cheers!
+    
+-->
+
